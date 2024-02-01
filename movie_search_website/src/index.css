@@ -1,0 +1,28 @@
+.container{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(120, 120, 151),rgb(19, 19, 186));
+  
+  }
+  .container h2{
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700px;
+    font-size: 48px;
+    
+  }
+  .container input{
+    color: black;
+    width: 60%;
+    display: flex;
+    padding: 20px 20px 20px 0px; 
+    font-size: 40px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
