@@ -1,9 +1,13 @@
 const Result = ({result}) => {
     return (
         <>
-        <div className="result">
-            <img src={result.Poster} alt=""></img>
-            <h3>{result.Title}</h3>
+        <div className=" container result">
+            <img src={result.Poster} alt="" />
+           
+           
+        </div>
+        <div className=" container title"> 
+         <h3>{result.Title}</h3>
         </div>
         
         
