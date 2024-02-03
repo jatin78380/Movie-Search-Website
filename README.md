@@ -29,3 +29,9 @@ The project structure includes the following components:
 ## Dependencies
 
 The main external dependency for this project is Axios for handling API requests.
+
+Usage
+- Use the Search component to input the movie you want to search for.
+-View the results in the Result component, displaying movie images and names.
+-Click on a movie to view detailed information in the Detail component.
+-Enjoy exploring movie details using the Movie Search Website.
