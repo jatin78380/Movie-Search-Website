@@ -61,7 +61,7 @@ const close =()=>{
     <>
     <div className='container'>
       {typeof state.selected.Title != "undefined" ? <Detail selected={state.selected} close={close}/> : <header>
-      <h2>Movie Search</h2>
+      <h2>Movie Search Website </h2>
 
       <Search handleInput={handleInput} SearchResult={SearchResult} />
        <div className="container">
