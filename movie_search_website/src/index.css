@@ -82,4 +82,6 @@ body{
 }
 .btn1{
   background-color: red;
+  padding: 0px 30px ;
+  font-weight: 700;
 }
