@@ -1,6 +1,8 @@
 # Movie-Search-Website
 
 ![image](https://github.com/jatin78380/Movie-Search-Website/assets/149093745/6b77d50a-49ba-4684-8560-bbe62b9b5ea0)
+![image](https://github.com/jatin78380/Movie-Search-Website/assets/149093745/3a9c8d5e-8988-4e26-8714-8d82b47bbaaf)
+
 
 
 # Movie Search Website with ReactJS
