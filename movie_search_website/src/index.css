@@ -1,51 +1,52 @@
-.container{
-    width: 100%;
-    padding:12px;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    background-color:blue;
-  
-  }
-  .container h2{
-    color: white;
-    width: 100%;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 700px;
-    font-size: 48px;
-    
-  }
-  .container input{
-    color: black;
-    width: 50%;
-    display: flex;
-    padding: 20px 20px 20px 0px; 
-    font-size: 40px;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 1.3rem;
-    margin-bottom: 1.5rem;
-  }
-  .container .result{
-    background: linear-gradient(rgb(211, 211, 219),rgb(29, 29, 192));
-  }
-
-  .row{
-    justify-content: center;
-    display: flex;
-    width:100%;
-  }
- 
-/* For all screen sizes */
-.col-12 {
-  width: 100%;
+body{
+  background: linear-gradient(blue,blue);
 }
-.result{
-  border: 2px solid gray;
+.container {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(blue,blue);
+}
+
+.container h2 {
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.container input {
+  color: black;
+  width: 50%;
+  padding: 20px 20px 20px 0px;
+  font-size: 40px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.container .result {
+  background-color: grey;
+  border: 10px solid grey;
   padding: 4px;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.row {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap; /* Added this line to wrap the images to the next row */
+}
+
+.col-12 {
+  width: 100%;
+  box-sizing: border-box; /* Added this line to include padding and border in the element's total width and height */
 }
 
 .result img {
@@ -53,13 +54,32 @@
   justify-content: space-between;
   border: solid #ccc;
   align-items: center;
-  width: 100;
+  width: 100%;
   height: 320px;
   box-sizing: border-box;
-}
-.result:hover{
-  cursor: pointer;
-  box-shadow: 0px 0px 30px;
-  color:white;
+  background: linear-gradient(rgb(211, 211, 219), rgb(29, 29, 192));
 }
 
+.result:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 30px;
+  color: white;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.detail h3 {
+  margin-bottom: 10px;
+}
+
+.detail p {
+  margin-bottom: 5px;
+}
+.btn1{
+  background-color: red;
+}

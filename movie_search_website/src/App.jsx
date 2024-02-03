@@ -2,12 +2,14 @@ import { useState } from 'react';
 import './App.css';
 import Search from './Search';
 import Result from './Result';
+import Detail from './Detail';
 import axios from 'axios';
 
 function App() {
   const [state, setState] = useState({
     search: '',
     results: [],
+    selected:{}
   });
 
   const handleInput = (event) => {
@@ -19,6 +21,19 @@ function App() {
       };
     });
   };
+  const openDetail =(id)=>{
+    axios.get('http://www.omdbapi.com/?i='+id+'&apikey=a2fcceb8')
+    .then(({data})=>{
+      setState((prevState) => {
+        return {
+         ...prevState,
+          selected: data,
+        }})
+
+    })
+    .catch(err => console.log(err));
+    
+  }
 
   const SearchResult = (event) => {
     if (event.key === 'Enter') {
@@ -33,26 +48,43 @@ function App() {
       })
      .catch(err => console.log(err));
     }
-  };
-
+  }
+const close =()=>{
+  setState((prevState) => {
+    return {
+     ...prevState,
+      selected: {},
+    };
+  });
+}
   return (
     <>
-      <div className="container">
-        <header>
-          <h2>Movie Search Website </h2>
-        </header>
-      </div>
-      <Search handleInput={handleInput} SearchResult={SearchResult} />
-      <div className="row">
-       {
-        state.results.map((result,i) =>(
-          <div className='result  ' key={i}>
-          <Result result={result} />
-             </div>
+    <div className='container'>
+      {typeof state.selected.Title != "undefined" ? <Detail selected={state.selected} close={close}/> : <header>
+      <h2>Movie Search</h2>
 
-        ))
-       }
-      </div>
+      <Search handleInput={handleInput} SearchResult={SearchResult} />
+       <div className="container">
+        <div className="row">
+          {
+
+            state.results.map((result,i)=>{
+              return(
+              <div className="col2">
+                <Result result={result} openDetail={openDetail}/>
+              </div>
+              )
+            })
+          }
+        </div>
+       </div>
+
+     </header>}
+     
+    </div>
+
+
+      
      
     </>
   );
