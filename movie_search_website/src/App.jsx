@@ -22,7 +22,7 @@ function App() {
     });
   };
   const openDetail =(id)=>{
-    axios.get('http://www.omdbapi.com/?i='+id+'&apikey=a2fcceb8')
+    axios.get('https://www.omdbapi.com/?i='+id+'&apikey=a2fcceb8')
     .then(({data})=>{
       setState((prevState) => {
         return {
@@ -37,7 +37,7 @@ function App() {
 
   const SearchResult = (event) => {
     if (event.key === 'Enter') {
-     axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=a2fcceb8'+'&s='+state.search)
+     axios.get('https://www.omdbapi.com/?i=tt3896198&apikey=a2fcceb8'+'&s='+state.search)
      .then(res => {
         setState((prevState) => {
           return {
